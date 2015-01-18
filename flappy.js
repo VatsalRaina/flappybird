@@ -53,7 +53,6 @@ function moveUp() {
 }
 
 function moveDown() {
-    player1.y = player1.y + 10
     player1.body.velocity.y = 100
 }
 
