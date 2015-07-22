@@ -1,31 +1,68 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head lang="en">
     <meta charset="utf-8" />
-    <title>Cambridge Coding Academy Flappy Bird</title>
-    <link rel="stylesheet" href="assets/cca.css">
+    <title>Jumping Blob</title>
+    <link rel = "stylesheet" href="assets/styles.css"/>
+    <link rel = "stylesheet" href="assets/bootstrap.css"/>
+    <script type="text/javascript" src="assets/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="phaser.min.js"></script>
-    <script type="text/javascript" src="flappy.js"></script>
+
+
 </head>
 
 <body>
-    <div id="header">
-        <h1 id="flappy">Flappy Bird</h1>
-        <div id="cca">
-        <a href="http://cambridgecoding.com">
-            <img src="http://cambridgecoding.com/img/logo_cca.png" id="logo"><br/>
-            <p>I learned to code in a day with CCA!</p>
-        </a>
+
+<div class="container">
+    <div class = "jumbotron">
+        <h1> BLOB GAME</h1>
+    </div>
+    <p> Will blob beat frog?</p>
+    <p> It does seem a little unfair considering that blob has been given a head start, but that's countered by the fact that it's not a race...</p>
+    <p> Either way, both blob and frog are a team!</p>
+    <div class = "row">
+        <div class="col-md-4">
+            <img src= "assets/Babyblob.png" alt = "Blob" style = "width:200px ;height:200px;">
+        </div>
+        <div class = "col-md-4">
+            <img src = "assets/flappy_frog.png" alt = "Frog" style ="width:200px; height:200px;">
+        </div>
+        <div class="col-md-4">
+            <p> The best scores are:</p>
+            <ul id="scoreBoard">
+            </ul>
         </div>
     </div>
-
-    <div id="game"> </div>
-
-    <div id="footer">
-        <p>&copy; Cambridge Coding Academy</p>
+    <p id="gameLink">
+        <a href = "http://localhost:63342/flappybird/index.html" > THE GAME</a>
+    </p>
+    <p> Press Enter to begin</p>
+    <div class = "row">
+        <div class="col-md-1">
+        </div>
+        <div class = "col-md-11">
+            <div id="game"> </div>
+        </div>
     </div>
+</div>
+<div id="greeting">
+    <h3> Save your score </h3>
+    <form id="greeting-form" method="post" action="/score">
+        <div class="form-group">
+            <label for="fullName">Team name?</label>
+            <input type="text" id="fullName"
+                   name="fullName" class="form-control" placeholder="Frob" required>
+            <label for="age">What's your age?</label>
+            <input type="number" id="age" class="form-control"
+                   name="age" placeholder="23">
+            <input type="hidden" id="score" name="score" value="0">
+        </div>
+        <button class="btn btn-default" type="submit">OK</button>
+    </form>
+</div>
 
+<script type="text/javascript" src="flappy.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,41 @@
+
+h1{
+    color: navy;
+    font-size: 50px;
+    font-style: italic;
+    font-family: "Glyphicons Halflings";
+    text-align: center;
+
+}
+
+.red{
+    color:red;
+    font-size: 30px;
+}
+
+.gray{
+    color: gray;
+    font-size: 20px;
+}
+
+#gameLink{
+    text-align: center;
+    border: groove;
+}
+
+#picLink{
+    text-align: center;
+}
+
+#greeting{
+    display: none;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    background: #ebccd1;
+    width: 350px;
+    height: 300px;
+    border: 2px sienna;
+    border-radius: 10px;
+    padding: 20px;
+}
